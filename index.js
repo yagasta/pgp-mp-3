@@ -399,6 +399,7 @@ const highCalorieButton = document.querySelector(".high-calorie");
 const lowCalorieButton = document.querySelector(".low");
 const highProtienButton = document.querySelector(".high-protien");
 const lowCabButton = document.querySelector(".low-cab");
+const clearButton = document.querySelector(".console-clear");
 
 getAllProductsButton.addEventListener("click", getAllItems);
 vegetablesButton.addEventListener("click", () => filterByCategory("Vegetable"));
@@ -411,3 +412,5 @@ highCalorieButton.addEventListener("click", highCalorie);
 lowCalorieButton.addEventListener("click", lowCalorie);
 highProtienButton.addEventListener("click", () => sortItems("protiens", true));
 lowCabButton.addEventListener("click", () => sortItems("cab", false));
+
+clearButton.addEventListener("click", () => console.clear());
