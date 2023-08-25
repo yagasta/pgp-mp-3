@@ -1,9 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+
+* {
+  font-family: "Source Code Pro", monospace;
+}
 
 body {
   background-color: rgb(18, 18, 18);
-  font-family: 'Source Code Pro', monospace;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   color: rgb(43, 198, 37);
+}
+
+h1 {
+  font-size: 1rem;
+}
+
+span {
+  color: rgb(255, 0, 247);
+}
+
+.button {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  padding: 2px 16px;
+  height: 32px;
+  min-width: 60px;
+  min-height: 32px;
+  border: none;
+  color: #fff;
+  background-color: #4f545c;
+  transition: background-color 0.17s ease, color 0.17s ease;
+}
+
+.button-group {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  max-width: 200px;
+  margin-top: 2rem;
 }

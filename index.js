@@ -337,7 +337,7 @@ const filterByCategory = (category) => {
 
 // filterByCategory("Vegetable");
 // filterByCategory("Fruit");
-// filterByCategory("Protien");
+// filterByCategory("Protein");
 // filterByCategory("Nuts");
 // filterByCategory("Grains");
 // filterByCategory("Dairy");
@@ -350,7 +350,7 @@ const lowCalorie = () => {
   });
 };
 
-// lowCalorie()
+// lowCalorie();
 
 const highCalorie = () => {
   f.forEach((i) => {
@@ -379,9 +379,35 @@ const sortItems = (sortby, type) => {
 
   const sortedItems = keys.map((k) => obj[k]);
   sortedItems.forEach((index) => {
-    console.log(f[index][sortby]);
+    console.log(f[index]);
   });
 };
 
 // sortItems("protiens", true);
 // sortItems("cab", false);
+
+//Extra js
+
+const getAllProductsButton = document.querySelector(".all-products");
+const vegetablesButton = document.querySelector(".vegetables");
+const fruitButton = document.querySelector(".fruit");
+const protienButton = document.querySelector(".protien");
+const nutsButton = document.querySelector(".nuts");
+const grainsButton = document.querySelector(".grains");
+const dairyButton = document.querySelector(".dairy");
+const highCalorieButton = document.querySelector(".high-calorie");
+const lowCalorieButton = document.querySelector(".low");
+const highProtienButton = document.querySelector(".high-protien");
+const lowCabButton = document.querySelector(".low-cab");
+
+getAllProductsButton.addEventListener("click", getAllItems);
+vegetablesButton.addEventListener("click", () => filterByCategory("Vegetable"));
+fruitButton.addEventListener("click", () => filterByCategory("Fruit"));
+protienButton.addEventListener("click", () => filterByCategory("Protein"));
+nutsButton.addEventListener("click", () => filterByCategory("Nuts"));
+grainsButton.addEventListener("click", () => filterByCategory("Grain"));
+dairyButton.addEventListener("click", () => filterByCategory("Dairy"));
+highCalorieButton.addEventListener("click", highCalorie);
+lowCalorieButton.addEventListener("click", lowCalorie);
+highProtienButton.addEventListener("click", () => sortItems("protiens", true));
+lowCabButton.addEventListener("click", () => sortItems("cab", false));
