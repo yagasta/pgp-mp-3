@@ -33,19 +33,29 @@ span {
   min-height: 32px;
   border: none;
   color: #fff;
-  background-color: #4f545c;
+  background-color: #464646;
   transition: background-color 0.17s ease, color 0.17s ease;
 }
 
+.button:hover {
+  background-color: #4741ff;
+}
+
 .button-group {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
   gap: 1rem;
-  max-width: 200px;
+  min-width: fit-content;
   margin-top: 2rem;
 }
 
 .console-clear {
   color: #000000;
   background-color: #ff7d71;
+}
+
+.console-clear:hover {
+  color: #000000;
+  background-color: #ff5445;
 }
