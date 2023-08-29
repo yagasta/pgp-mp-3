@@ -1,4 +1,4 @@
-const f = [
+const foodCart = [
   {
     id: 1,
     foodname: "Apple",
@@ -322,13 +322,13 @@ const f = [
 ];
 
 const getAllItems = () => {
-  f.forEach((i) => console.log(i));
+  foodCart.forEach((i) => console.log(i));
 };
 
 // getAllItems()
 
 const filterByCategory = (category) => {
-  f.forEach((i) => {
+  foodCart.forEach((i) => {
     if (i.category === category) {
       console.log(i);
     }
@@ -343,7 +343,7 @@ const filterByCategory = (category) => {
 // filterByCategory("Dairy");
 
 const lowCalorie = () => {
-  f.forEach((i) => {
+  foodCart.forEach((i) => {
     if (i.calorie < 100) {
       console.log(i);
     }
@@ -353,7 +353,7 @@ const lowCalorie = () => {
 // lowCalorie();
 
 const highCalorie = () => {
-  f.forEach((i) => {
+  foodCart.forEach((i) => {
     if (i.calorie > 100) {
       console.log(i);
     }
@@ -365,7 +365,7 @@ const highCalorie = () => {
 const sortItems = (sortby, type) => {
   let obj = {};
 
-  f.forEach((i, index) => (obj[i[sortby]] = index));
+  foodCart.forEach((i, index) => (obj[i[sortby]] = index));
 
   const keys = Object.keys(obj);
 
@@ -379,7 +379,7 @@ const sortItems = (sortby, type) => {
 
   const sortedItems = keys.map((k) => obj[k]);
   sortedItems.forEach((index) => {
-    console.log(f[index]);
+    console.log(foodCart[index]);
   });
 };
 
